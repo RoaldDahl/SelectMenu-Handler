@@ -9,7 +9,7 @@ async function loadSelectMenus(client) {
     const selectMenu = require(file);
 
     client.selectMenus.set(selectMenu.name, selectMenu);
-    table.setHeading(`Modal ID`, `Status`);
+    table.setHeading(`SelectMenu ID`, `Status`);
     table.addRow(`${selectMenu.name}`, "🟩 Success");
   });
   
