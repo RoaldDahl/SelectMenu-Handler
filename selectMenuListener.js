@@ -2,7 +2,6 @@ const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
   name: "interactionCreate",
-  folder: "Listeners",
     async execute(interaction, client) {
     if (!interaction.isSelectMenu()) return;
   
