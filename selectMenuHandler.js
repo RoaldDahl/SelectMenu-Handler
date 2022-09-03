@@ -7,10 +7,11 @@ async function loadSelectMenus(client) {
   
   Files.forEach((file) => {
     const selectMenu = require(file);
+    if (!selectMenu.id) return;
 
-    client.selectMenus.set(selectMenu.name, selectMenu);
+    client.selectMenus.set(selectMenu.id, selectMenu);
     table.setHeading(`SelectMenu ID`, `Status`);
-    table.addRow(`${selectMenu.name}`, "🟩 Success");
+    table.addRow(`${selectMenu.id}`, "🟩 Success");
   });
   
   return console.log(table.toString())
